@@ -1,6 +1,3 @@
-import { dispatch } from '@common';
-import { appActions } from '@redux-slice';
-
 export type LoginBody = {
   username: string;
   password: string;
@@ -17,5 +14,5 @@ export function login(body: LoginBody) {
 }
 
 export function onSetToken(token: string) {
-  dispatch(appActions.setToken(token));
+  console.log('From sub module', token);
 }

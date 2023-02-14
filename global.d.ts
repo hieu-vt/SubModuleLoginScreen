@@ -9,6 +9,4 @@ declare module '@handler' {
   };
   export function login(body: LoginBody): Promise<LoginResponse>;
   export function onSetToken(token: string): void;
-  export const Block: React.ReactElement;
-  export const Screen: React.ReactElement;
 }
