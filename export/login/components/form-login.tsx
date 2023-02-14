@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FormProvider, useForm } from 'react-hook-form';
 
-import { Button } from '@components';
+import { Button, Text } from '@components';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { FormLoginType } from '@model/authentication';
 import { loginValidation } from '@validate/login';
@@ -25,6 +25,7 @@ export const FormLogin = ({ onSubmit }: FormLoginProps) => {
   // render
   return (
     <FormProvider {...formMethod}>
+      <Text text="Login from submodule" />
       <Input<FormLoginType> name={'email'} label={'Email'} />
       <Input<FormLoginType> name={'password'} label={'Password'} />
 
